@@ -93,7 +93,7 @@ mkdir -p "$COMPILE_DIR" "$COMPILE_DIR/bin" "$COMPILE_DIR/lib"
 #   echo "FATAL: ROOT_URL is not defined."
 #   exit 1
 # fi
-export ROOT_URL=\${ROOT_URL:-`ruby -e 'require "json"; puts "https://#{JSON.parse(ENV["VCAP_APPLICATION"])["application_uris"][0]}"'`}
+export ROOT_URL=`ruby -e 'require "json"; puts "https://#{JSON.parse(ENV["VCAP_APPLICATION"])["application_uris"][0]}"'`
 
 #
 # Install meteor

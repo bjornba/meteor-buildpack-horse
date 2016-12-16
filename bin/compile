@@ -210,6 +210,7 @@ cat > "$APP_CHECKOUT_DIR"/.profile.d/path.sh <<EOF
   #!/bin/sh
   export PATH=\$HOME/$COMPILE_DIR_SUFFIX/bin:\$PATH
   export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$HOME/$COMPILE_DIR_SUFFIX/lib
+  export ROOT_URL=`ruby -e 'require "json"; puts "https://#{JSON.parse(ENV["VCAP_APPLICATION"])["application_uris"][0]}"'`
 EOF
 
 #

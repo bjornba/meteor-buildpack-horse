@@ -10,7 +10,7 @@ set -e
 #set -x
 
 # Create symbolic links required for the CCQ apps.
-/tmp/app/add_symlinks.sh
+app/add_symlinks.sh
 
 # Load config vars into environment (from https://devcenter.heroku.com/articles/buildpack-api)
 export_env_dir() {

@@ -94,7 +94,7 @@ export ROOT_URL=`ruby -e 'require "json"; puts "https://#{JSON.parse(ENV["VCAP_A
 #   echo "-----> Existing meteor installation found, using it."
 # else
   echo "-----> Installing meteor"
-  curl -sS "https://install.meteor.com/?release=1.4.2.3" | HOME="$METEOR_DIR" /bin/sh
+  curl -sS "https://install.meteor.com/?release=1.3.2.2" | HOME="$METEOR_DIR" /bin/sh
 # fi
 # Function to execute meteor with proper HOME.
 function METEOR {
